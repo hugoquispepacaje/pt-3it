@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
