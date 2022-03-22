@@ -38,4 +38,4 @@ Para desplegar localmente el proyecto solo se deben instalar las dependencias co
 
 ## Proyecto desplegado
 
-Para ver el proyecto desplegado se puede ingresar al siguiente  [link](https://pt-3it.hugoquispe.cl).
+Para ver el proyecto desplegado se puede ingresar al siguiente  [link](https://3it-pt.hugoquispe.cl).
