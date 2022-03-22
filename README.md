@@ -1,23 +1,36 @@
-# Prueba tecnica 3IT
+# Prueba técnica 3IT
 
-Prueba tecnica para el puesto de programador FrontEnd en 3IT.
+Prueba técnica para el puesto de programador FrontEnd en 3IT.
 
-Se realizaron los siguiente pasos:
+Se realizaron los siguientes pasos:
 
-  * Leer cuidadosamente el documento.
-  * Preparar el stack de Angular gracias a AngularCLI. 
-  * Importar librerias, fuentes e iconos necesarios para el proyecto.
-  * Preapara el repositorio en GitHub.
-  * Creacion de modulos necesarios.
-  * Creacion de rutas necesarias.
-  * Creacion de vistas y componentes.
-  * Creacion de servicios.
-  * Conexion a la Api.
-  * Desarrollo del sistema a nivel funcional.
-  * Investigacion de BEM.
-  * Estilizar la aplicacion.
-  * Pruebas rapidas.
-  * Despliegue.
+* Leer cuidadosamente el documento.
+
+* Preparar el stack de Angular gracias a AngularCLI.
+
+* Importar librerías, fuentes e iconos necesarios para el proyecto.
+
+* Preparar el repositorio en GitHub.
+
+* Creación de módulos necesarios.
+
+* Creación de rutas necesarias.
+
+* Creación de vistas y componentes.
+
+* Creación de servicios.
+
+* Conexión a la Api.
+
+* Desarrollo del sistema a nivel funcional.
+
+* Investigación de BEM.
+
+* Estilizar la aplicación.
+
+* Pruebas rápidas.
+
+* Despliegue.
 
 ## Despliegue local
 
