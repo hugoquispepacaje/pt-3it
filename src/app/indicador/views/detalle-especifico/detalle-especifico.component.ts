@@ -35,16 +35,21 @@ export class DetalleEspecificoComponent implements OnInit {
     this.indicadoresService.getIndicador(codigo).subscribe(
       (data:any)=>{
         this.indicador = data;
-        this.valor = 
-          this.indicador.serie?
-          this.indicador.serie[0].valor:
-          0;
-        this.fecha = 
-          this.indicador.serie?
-          this.indicador.serie[0].fecha:
-          new Date();
-        
+        if(
+          Array.isArray(this.indicador.serie) && 
+          this.indicador.serie.length > 1
+        )
+        {
+          this.valor = 
+            this.indicador.serie?
+            this.indicador.serie[0].valor:
+            0;
+          this.fecha = 
+            this.indicador.serie?
+            this.indicador.serie[0].fecha:
+            new Date();
           this.chart?.inicializarChart(this.indicador);
+        }
           this.headerService.cambiarTitulo(
             this.indicador.nombre?this.indicador.nombre:''
           );

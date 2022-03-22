@@ -1,27 +1,28 @@
-# Pt3it
+# Prueba tecnica 3IT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Prueba tecnica para el puesto de programador FrontEnd en 3IT.
 
-## Development server
+Se realizaron los siguiente pasos:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  * Leer cuidadosamente el documento.
+  * Preparar el stack de Angular gracias a AngularCLI. 
+  * Importar librerias, fuentes e iconos necesarios para el proyecto.
+  * Preapara el repositorio en GitHub.
+  * Creacion de modulos necesarios.
+  * Creacion de rutas necesarias.
+  * Creacion de vistas y componentes.
+  * Creacion de servicios.
+  * Conexion a la Api.
+  * Desarrollo del sistema a nivel funcional.
+  * Investigacion de BEM.
+  * Estilizar la aplicacion.
+  * Pruebas rapidas.
+  * Despliegue.
 
-## Code scaffolding
+## Despliegue local
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para desplegar localmente el proyecto solo se deben instalar las dependencias con el comando `npm install` y luego ingresar `ng serve`.
 
-## Build
+## Proyecto desplegado
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para ver el proyecto desplegado se puede ingresar al siguiente  [link](https://pt-3it.hugoquispe.cl).

@@ -4,6 +4,7 @@ import { IndicadoresService } from '../../services/indicadores.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { HeaderService } from 'src/app/header/header.service';
 import { AlertasService } from 'src/app/services/alertas.service';
+import Utiles from '../../utiles/utiles';
 @Component({
   selector: 'app-detalle-historial',
   templateUrl: './detalle-historial.component.html',
@@ -12,7 +13,7 @@ import { AlertasService } from 'src/app/services/alertas.service';
 export class DetalleHistorialComponent implements OnInit {
 
   indicador:Indicador = {};
-
+  isTableEmpty:boolean = true;
   constructor(
     private indicadoresService:IndicadoresService,
     private route: ActivatedRoute,
@@ -34,8 +35,10 @@ export class DetalleHistorialComponent implements OnInit {
         this.headerService.cambiarTitulo(
           this.indicador.nombre?this.indicador.nombre:''
         );
+        this.isTableEmpty = Utiles.estaArrayVacio(this.indicador.serie);
         this.alertasService.cerrarAlerta();
       }
     );
   }
+  
 }

@@ -52,4 +52,10 @@ export default class Utiles {
     let year = date.getFullYear();
     return(`${day}-${month}-${year}`);
   }
+  static estaArrayVacio(array:any):boolean{
+    if(!Array.isArray(array) || array.length ===0){
+      return true;
+    }
+    return false;
+  }
 }

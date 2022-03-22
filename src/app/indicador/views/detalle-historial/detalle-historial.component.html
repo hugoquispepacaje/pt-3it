@@ -1,5 +1,8 @@
 <div class="container container--historial">
-  <table class="table table-striped">
+  <table 
+    *ngIf="!isTableEmpty"
+    class="table table-striped"
+  >
     <tbody>
       <tr *ngFor="let historial of indicador.serie">
         <td class="table__td table__td--fecha">{{historial.fecha | date:'dd/MM/yyyy'}}</td>
@@ -7,4 +10,11 @@
       </tr>
     </tbody>
   </table>
+  <div 
+    class="alert alert-info alert--historial" 
+    role="alert"
+    *ngIf="isTableEmpty"
+  >
+    No hay datos suficientes.
+  </div>
 </div>

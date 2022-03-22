@@ -10,3 +10,6 @@
 .table__td--valor{
   font-weight: bold;
 }
+.alert--historial{
+  text-align: center;
+}
