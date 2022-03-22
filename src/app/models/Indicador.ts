@@ -8,6 +8,6 @@ export interface Indicador {
 }
 
 interface Historial {
-  fecha?: Date,
-  valor?: number
+  fecha: Date,
+  valor: number
 }

@@ -1,1 +1,19 @@
-<p>detalle-especifico works!</p>
+<div class="container">
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Nombre</td>
+        <td>{{indicador.nombre}}</td>
+      </tr>
+      <tr>
+        <td>Fecha</td>
+        <td>{{fecha | date:'dd/MM/yyyy'}}</td>
+      </tr>
+      <tr>
+        <td>Unidad de Medida</td>
+        <td>{{indicador.unidad_medida}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <app-chart></app-chart> 
+</div>

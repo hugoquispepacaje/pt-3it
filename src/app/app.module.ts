@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { IndicadorModule } from './indicador/indicador.module';
+import { NgChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { IndicadorModule } from './indicador/indicador.module';
     HeaderModule,
     HttpClientModule,
     AppRoutingModule,
-    IndicadorModule
+    IndicadorModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

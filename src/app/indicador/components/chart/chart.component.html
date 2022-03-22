@@ -1,0 +1,14 @@
+<canvas 
+  *ngIf="mostrarChart"
+  baseChart 
+  [data]="lineChartData"
+  [type]="lineChartType"
+  >
+</canvas>
+<div 
+  class="alert alert-info" 
+  role="alert"
+  *ngIf="!mostrarChart"
+>
+  No hay datos suficientes.
+</div>

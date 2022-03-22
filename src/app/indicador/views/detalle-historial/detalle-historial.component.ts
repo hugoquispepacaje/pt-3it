@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Indicador } from 'src/app/models/Indicador';
 import { IndicadoresService } from '../../services/indicadores.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
+import { HeaderService } from 'src/app/header/header.service';
+import { AlertasService } from 'src/app/services/alertas.service';
 @Component({
   selector: 'app-detalle-historial',
   templateUrl: './detalle-historial.component.html',
@@ -15,7 +16,8 @@ export class DetalleHistorialComponent implements OnInit {
   constructor(
     private indicadoresService:IndicadoresService,
     private route: ActivatedRoute,
-    private router: Router
+    private headerService:HeaderService,
+    private alertasService:AlertasService
   ) { }
 
   ngOnInit(): void {
@@ -25,10 +27,14 @@ export class DetalleHistorialComponent implements OnInit {
   }
 
   cargarIndicador(codigo:string):void {
+    this.alertasService.loading();
     this.indicadoresService.getIndicador(codigo).subscribe(
       (data:any)=>{
         this.indicador = data;
-        alert(this.indicador.codigo)
+        this.headerService.cambiarTitulo(
+          this.indicador.nombre?this.indicador.nombre:''
+        );
+        this.alertasService.cerrarAlerta();
       }
     );
   }

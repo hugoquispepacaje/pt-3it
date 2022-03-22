@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { HeaderService } from '../../header.service';
 
 @Component({
   selector: 'app-nav',
@@ -9,14 +10,28 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 export class NavComponent implements OnInit {
 
   @Input() isMainView: boolean = true;
+  private subscription: Subscription = new Subscription();
   titulo:string = 'tituloooo';
 
   constructor(
-    private router: Router,
-  ) { }
+    private headerService:HeaderService
+  ) { 
+    this.subscription = this.headerService.headerState.subscribe(
+      (titulo: string) => {
+        this.cambiarTitulo(titulo);
+      }
+    );
+  }
 
   ngOnInit(): void {
     
   }
   
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+  cambiarTitulo(titulo:string){
+    this.titulo = titulo;
+    this.isMainView = titulo === 'Indicadores';
+  }
 }
