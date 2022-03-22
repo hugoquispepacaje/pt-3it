@@ -1,0 +1,10 @@
+.container--especifico{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.h2--especifico{
+  color:#007bff;
+  font-weight: bold;
+  text-align: center;
+}

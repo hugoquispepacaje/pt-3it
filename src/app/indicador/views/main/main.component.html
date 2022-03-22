@@ -1,33 +1,35 @@
-<div class="container">
-
-  <div class="row" >
+<div class="container container--main">
+  <div class="row">
     <div 
       *ngFor="let indicador of indicadores" 
-      class="col-md-4 col-sm-6 col-12"
+      class="col-md-4 col-sm-6 col-12 col--main"
     >
-      <div class="row" >
-        <div 
-          class="col-sm-12 col-6"
-        > 
-          <a 
-            [routerLink]="['/detalle-historial', indicador.codigo]"
-            routerLinkActive="active"
-          >
-            <p>{{indicador.nombre}}</p>
-            <p>{{indicador.unidad_medida}}</p>
-          </a>
-        </div>
-        
-        
-        <div class="col-sm-12 col-6"> 
-          <button 
-            type="button" 
-            class="btn btn-outline-primary"
-            [routerLink]="['/detalle-especifico', indicador.codigo]"
-            routerLinkActive="active"
-          >
-            <i class="fa fa-info"></i>
-          </button>
+      <div class="card card--main">
+        <div class="row">
+          <div 
+            class="col-sm-12 col-6"
+          > 
+            <a 
+              class="card__a"
+              [routerLink]="['/detalle-historial', indicador.codigo]"
+              routerLinkActive="active"
+            >
+              <p class="card__text card__text--title">{{indicador.nombre}}</p>
+              <p class="card__text card__text--subtitle">{{indicador.unidad_medida}}</p>
+            </a>
+          </div>
+          
+          
+          <div class="col-sm-12 col-6"> 
+            <button 
+              type="button" 
+              class="btn btn-outline-primary card__button--main"
+              [routerLink]="['/detalle-especifico', indicador.codigo]"
+              routerLinkActive="active"
+            >
+              <i class="fa fa-info"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,12 @@
+.container--historial{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.table__td--fecha{
+  color: #007bff;
+}
+
+.table__td--valor{
+  font-weight: bold;
+}

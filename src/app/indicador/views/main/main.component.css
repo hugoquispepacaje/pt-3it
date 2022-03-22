@@ -1,0 +1,33 @@
+.container--main {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.col--main {
+  padding: 0.3rem;
+}
+.card--main {
+  text-align: center;
+  padding: 1rem;
+}
+.card__text{
+  color: black;
+  margin: 0;
+}
+.card__text--title{
+  font-weight: bold;
+}
+.card__button--main{
+  margin-top: 1rem;
+}
+.card__a:hover{
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .card__button--main{
+    margin-top: 0;
+  }
+  .col--main {
+    padding: 0;
+  }
+}

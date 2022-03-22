@@ -16,7 +16,7 @@ export class DetalleEspecificoComponent implements OnInit {
   @ViewChild(ChartComponent) chart?: ChartComponent;
   indicador:Indicador = {};
   fecha:Date = new Date();
-
+  valor:number = 0;
   constructor(
     private indicadoresService:IndicadoresService,
     private route: ActivatedRoute,
@@ -35,10 +35,15 @@ export class DetalleEspecificoComponent implements OnInit {
     this.indicadoresService.getIndicador(codigo).subscribe(
       (data:any)=>{
         this.indicador = data;
+        this.valor = 
+          this.indicador.serie?
+          this.indicador.serie[0].valor:
+          0;
         this.fecha = 
           this.indicador.serie?
           this.indicador.serie[0].fecha:
           new Date();
+        
           this.chart?.inicializarChart(this.indicador);
           this.headerService.cambiarTitulo(
             this.indicador.nombre?this.indicador.nombre:''
