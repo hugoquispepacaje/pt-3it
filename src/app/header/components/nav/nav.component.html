@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-light">
+  <div>
+    <button 
+      *ngIf="!isMainView"
+      type="button" 
+      class="btn btn-outline-primary"
+    >
+      <i class="fa fa-caret-left"></i>
+      Indicador
+    </button>
+  </div>
+  <h1>{{isMainView?"Indicadores":titulo}}</h1>
+  <div></div>
+</nav>
